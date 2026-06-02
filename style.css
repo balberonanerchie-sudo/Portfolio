@@ -1,0 +1,387 @@
+body {
+    background: #ffe6f0;
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+    overflow-x: hidden;
+}
+
+/* NAV */
+.pink-nav {
+    background: #ffb6c1;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    padding-top: 80px;
+}
+
+/* PROFILE */
+.profile-img {
+    width: 260px;
+    border-radius: 50%;
+    border: 5px solid #ff69b4;
+}
+
+/* TEXT */
+.pink {
+    color: #ff1493;
+}
+
+/* BUTTONS */
+.btn-pink {
+    background: #ff69b4;
+    color: white;
+}
+
+.btn-outline-pink {
+    border: 2px solid #ff69b4;
+    color: #ff69b4;
+}
+
+/* PROJECT CARDS */
+.project-card {
+    border: none;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+/* SKILLS */
+.skill-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* FOOTER */
+.pink-footer {
+    background: #ffb6c1;
+}
+
+/* DARK MODE */
+.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode .skill-box,
+.dark-mode .card {
+    background: #2a2a2a;
+    color: white;
+}
+
+/* FADE ANIMATION */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s ease;
+}
+:root {
+    --bg-color: #FFF5F5;
+    --card-bg: #FFFFFF;
+    --primary-pink: #FFB7B2;
+    --accent-pink: #FF8B94;
+    --text-dark: #4A3E3D;
+    --text-muted: #8A7A79;
+    --border-color: #FFE3E3;
+    --shadow: 0 10px 30px rgba(255, 139, 148, 0.08);
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Re-mapping standard colors to match theme */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+/* Navbar Customization */
+.navbar {
+    background: rgba(255, 245, 245, 0.85) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: -0.5px;
+    color: var(--text-dark) !important;
+}
+
+.navbar-brand span {
+    color: var(--accent-pink);
+}
+
+.nav-link {
+    color: var(--text-dark) !important;
+    font-weight: 500;
+    margin-left: 1.5rem;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--accent-pink) !important;
+}
+
+/* Hero / Header Configurations */
+.hero-section {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-tag {
+    font-size: 1rem;
+    color: var(--accent-pink);
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    letter-spacing: -1.5px;
+    line-height: 1.2;
+}
+
+.title-tag {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* Profile Image Animation Blob */
+.profile-wrapper {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 0 auto;
+}
+
+.profile-blob {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-pink);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    animation: blobby 8s ease-in-out infinite alternate;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.profile-img-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 6px solid #fff;
+    box-shadow: var(--shadow);
+    z-index: 2;
+    background-color: #fff;
+}
+
+.profile-img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes blobby {
+    0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+    100% { border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%; }
+}
+
+/* Custom UI Buttons */
+.btn-custom-pink {
+    background-color: var(--accent-pink);
+    color: #fff;
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(255, 139, 148, 0.3);
+    border: none;
+    transition: var(--transition);
+}
+
+.btn-custom-pink:hover {
+    background-color: #f77680;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-custom-outline {
+    background-color: transparent;
+    color: var(--text-dark);
+    border-radius: 50px;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.btn-custom-outline:hover {
+    background-color: var(--border-color);
+    color: var(--text-dark);
+}
+
+/* Portfolio Title Minimal Line */
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 4px;
+    background-color: var(--accent-pink);
+    border-radius: 2px;
+}
+
+/* Minimalist Project Cards */
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary-pink);
+    box-shadow: 0 15px 35px rgba(255, 139, 148, 0.15);
+}
+
+.folder-icon {
+    font-size: 1.8rem;
+    color: var(--accent-pink);
+}
+
+/* New Link + Text Layout with Hover Micro-interaction */
+.project-links a {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.project-links a i {
+    font-size: 0.95rem;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-links a {
+    color: var(--accent-pink);
+}
+
+.project-card:hover .project-links a i {
+    transform: translate(2px, -2px);
+}
+
+.tech-tag {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Capability Skill Styling */
+.skills-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    height: 100%;
+}
+
+.skills-box h3 i {
+    color: var(--accent-pink);
+}
+
+.skill-badge {
+    background: var(--bg-color);
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Contact Details Layout */
+.contact-container {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 4rem 2rem;
+    box-shadow: var(--shadow);
+}
+
+.contact-pill {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.contact-pill:hover {
+    border-color: var(--accent-pink);
+    transform: translateY(-2px);
+    background: #fff;
+    color: var(--text-dark);
+}
+
+footer {
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
